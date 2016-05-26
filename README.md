@@ -2,6 +2,7 @@ Allows hotsing of basic html layouts from file system.
 
 It configures similarly to PhysicalFileSystem:
 
+```
 public class Startup
 {
   public void Configuration(IAppBuilder app)
@@ -17,9 +18,11 @@ public class Startup
       app.UseFileServer(options);
   }
 }
+```
 
 And start the server like usual:
 
+```
 private static void Main(string[] args)
 {
     using (WebApp.Start<Startup>("http://localhost:12345"))
@@ -27,4 +30,4 @@ private static void Main(string[] args)
         Console.ReadLine();
     }
 }
-
+```
